@@ -26,6 +26,7 @@ jobs:
         run: aria2c -s 16 -x 16 ${{ github.event.inputs.ROM_URL }}
 
       - name: Extract Payload
+        continue-on-error: true
         run: |
           chmod u+x .github/scripts/android-ota-extractor
           .github/scripts/android-ota-extractor *.zip

@@ -20,9 +20,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+      - name: Install aria2
+        run: sudo apt install aria2
       - name: Download file
-        run: curl -LJO ${{ github.event.inputs.ROM_URL }}
+        run: aria2c -s 16 -x 16 ${{ github.event.inputs.ROM_URL }}
 
       - name: Extract Payload
         run: |

@@ -1,4 +1,4 @@
-name: Extract and Release
+name: Extract vulkan driver
 
 on:
   workflow_dispatch:

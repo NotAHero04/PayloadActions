@@ -9,9 +9,6 @@ on:
       DEVICE_NAME:
         description: "DEVICE_NAME"
         default: "spes"
-      EXTRACTED_FILES:
-        description: "EXTRACTED_FILES"
-        default: "boot.img, dtbo.img, product.img, system.img, system_ext.img"
 
 jobs:
   build-and-release:
